@@ -4,9 +4,16 @@ Layout: Content-Sidebar
 */
 
 /*Global Styles*/
-.site-main {
-	background: #b2b2b2;
+.site-content {
+    padding-bottom: 4em;
+    background: #b2b2b2;
 }
+.single .site-content,
+.page .site-content { 
+    background: #fff; 
+    background: hsl(0, 0%, 100%);
+}
+
 .site-content .widget-area {
 	width: 380px;
         float: right;
@@ -20,7 +27,6 @@ Layout: Content-Sidebar
 }
 .entry-header,
 .entry-content,
-.entry-meta,
 .entry-footer,
 .tag-links,
 .post-navigation,
@@ -51,7 +57,6 @@ Layout: Content-Sidebar
     
     .entry-header,
     .entry-content,
-    .entry-meta,
     .entry-footer,
     .tag-links,
     .post-navigation,

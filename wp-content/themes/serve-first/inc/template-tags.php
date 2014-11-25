@@ -49,14 +49,16 @@ function serve_first_post_nav() {
 	}
 	?>
 	<nav class="navigation post-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'serve-first' ); ?></h1>
-		<div class="nav-links">
-			<?php
-				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span>&nbsp;%title', 'Previous post link', 'serve-first' ) );
-				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title&nbsp;<span class="meta-nav">&rarr;</span>', 'Next post link',     'serve-first' ) );
-			?>
-		</div><!-- .nav-links -->
-	</nav><!-- .navigation -->
+    <div class="post-nav-box clear">
+        <h1 class="screen-reader-text"><?php _e( 'Post navigation', 'serve-first' ); ?></h1>
+        <div class="nav-links">
+            <?php
+            previous_post_link( '<div class="nav-previous"><div class="nav-indicator">' . _x( 'Previous Post:', 'Previous post', 'serve-first' ) . '</div><h1>%link</h1></div>', '%title' );
+            next_post_link(     '<div class="nav-next"><div class="nav-indicator">' . _x( 'Next Post:', 'Next post', 'serve-first' ) . '</div><h1>%link</h1></div>', '%title' );
+            ?>
+        </div><!-- .nav-links -->
+    </div><!-- .post-nav-box -->
+</nav><!-- .navigation -->
 	<?php
 }
 endif;
