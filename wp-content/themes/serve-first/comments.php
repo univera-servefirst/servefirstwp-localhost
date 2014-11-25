@@ -30,29 +30,24 @@ if ( post_password_required() ) {
 			?>
 		</h2>
 
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-		<nav id="comment-nav-above" class="comment-navigation" role="navigation">
-			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'serve-first' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'serve-first' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'serve-first' ) ); ?></div>
-		</nav><!-- #comment-nav-above -->
-		<?php endif; // check for comment navigation ?>
+		
 
 		<ol class="comment-list">
 			<?php
 				wp_list_comments( array(
 					'style'      => 'ol',
 					'short_ping' => true,
+                                        'avatar_size' => 50,
 				) );
 			?>
 		</ol><!-- .comment-list -->
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-		<nav id="comment-nav-below" class="comment-navigation" role="navigation">
-			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'serve-first' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'serve-first' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'serve-first' ) ); ?></div>
-		</nav><!-- #comment-nav-below -->
+		<nav id="comment-nav-below" class="comment-navigation clear" role="navigation">
+                    <h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'serve-first' ); ?></h1>
+                    <div class="nav-previous"><?php previous_comments_link( __( '<i class="fa fa-arrow-circle-o-left"></i> Older Comments', 'serve-first' ) ); ?></div>
+                    <div class="nav-next"><?php next_comments_link( __( 'Newer Comments <i class="fa fa-arrow-circle-o-right"></i>', 'serve-first' ) ); ?></div>
+                </nav><!-- #comment-nav-below -->
 		<?php endif; // check for comment navigation ?>
 
 	<?php endif; // have_comments() ?>
