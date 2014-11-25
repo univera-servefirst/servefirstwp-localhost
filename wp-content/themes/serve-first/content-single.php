@@ -19,6 +19,15 @@
 
 		<div class="entry-meta">
 			<?php serve_first_posted_on(); ?>
+                    
+                    <?php 
+                        if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) { 
+                            echo '<span class="comments-link">';
+                            comments_popup_link( __( 'Leave a comment', 'my-simone' ), __( '1 Comment', 'serve-first' ), __( '% Comments', 'serve-first' ) );
+                            echo '</span>';
+                        }
+                    ?>
+
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 

@@ -831,7 +831,8 @@ X.X Header
     padding: 6rem 0;
     text-align: center;
     background: #2c86ba;
-    background: hsl(202, 62%, 45%);
+/*    background: hsl(202, 62%, 45%);*/
+    background: hsla(120, 62%, 43%, 1);
 }
 
 .title-box {
