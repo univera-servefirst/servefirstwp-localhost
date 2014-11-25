@@ -32,6 +32,8 @@ function serve_first_setup() {
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
+        add_image_size('large-thumb', 1060, 650, true);
+        add_image_size('index-thumb', 780, 250, true);
 
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
