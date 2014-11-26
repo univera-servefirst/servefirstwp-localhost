@@ -64,9 +64,7 @@ function serve_first_setup() {
 	 * Enable support for Post Formats.
 	 * See http://codex.wordpress.org/Post_Formats
 	 */
-	add_theme_support( 'post-formats', array(
-		'aside', 'image', 'video', 'quote', 'link',
-	) );
+	add_theme_support( 'post-formats', array( 'aside' ) );
 
 	// Set up the WordPress core custom background feature.
 //	add_theme_support( 'custom-background', apply_filters( 'serve_first_custom_background_args', array(

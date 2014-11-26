@@ -31,7 +31,8 @@ Layout: Content-Sidebar
 .tag-links,
 .post-navigation,
 .comments-area,
-.paging-navigation {
+.paging-navigation,
+.page-header {
     position: relative;
     max-width: 780px;
     max-width: 78rem;
@@ -87,7 +88,8 @@ Layout: Content-Sidebar
     .post-navigation,
     .comments-area,
     .paging-navigation,
-    .index-box{
+    .index-box,
+    .page-header{
         margin-right: 0;
     }
     
@@ -103,6 +105,7 @@ Layout: Content-Sidebar
     }   
 }
 
+.page-header,
 .paging-navigation {
     padding-top: 1em;
     padding-bottom: 1em;
