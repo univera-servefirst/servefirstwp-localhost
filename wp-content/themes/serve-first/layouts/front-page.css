@@ -39,14 +39,14 @@
     padding: 4rem 0;
 }
    
-
+/* targets front-page*/
 @media screen and (max-width: 1539px) and (min-width: 1160px){ 
-    .content-area.lander-page {
+    .content-area.front-page {
          margin-left: 0; 
         padding-left: 0; 
     }
 }
-
+/*centers content */
 .indent {
     max-width: 1000px;
     margin: 0 auto;
