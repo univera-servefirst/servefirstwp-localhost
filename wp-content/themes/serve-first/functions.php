@@ -114,6 +114,9 @@ add_action( 'widgets_init', 'serve_first_widgets_init' );
 function serve_first_scripts() {
 	wp_enqueue_style( 'serve-first-style', get_stylesheet_uri() );
         
+       if (is_front_page()){
+           wp_enqueue_style('serve-first-front-page-style',  get_stylesheet_directory_uri() . '/layouts/front-page.css');
+       }
         //this if block is for page templates style sheets 
        if (is_page_template('page-templates/page-nosidebar.php')) {
             wp_enqueue_style( 'serve-first-layout-style' , get_template_directory_uri() . '/layouts/no-sidebar.css');
