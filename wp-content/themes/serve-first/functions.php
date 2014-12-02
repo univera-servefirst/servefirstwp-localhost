@@ -21,6 +21,12 @@ if ( ! function_exists( 'serve_first_setup' ) ) :
  * as indicating support for post thumbnails.
  */
 function serve_first_setup() {
+    
+    
+    // This theme styles the visual editor to resemble the theme style.
+        $font_url = 'http://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,900,900italic|PT+Serif:400,700,400italic,700italic';
+        add_editor_style( array( 'inc/editor-style.css', str_replace( ',', '%2C', $font_url ) ) );
+                
 
 	/*
 	 * Make theme available for translation.
@@ -108,7 +114,12 @@ add_action( 'widgets_init', 'serve_first_widgets_init' );
 function serve_first_scripts() {
 	wp_enqueue_style( 'serve-first-style', get_stylesheet_uri() );
         
-        wp_enqueue_style('serve-frist-content-sidebar', get_template_directory_uri() . '/layouts/content-sidebar.css');
+        //this if block is for page templates style sheets 
+       if (is_page_template('page-templates/page-nosidebar.php')) {
+            wp_enqueue_style( 'serve-first-layout-style' , get_template_directory_uri() . '/layouts/no-sidebar.css');
+        } else {
+            wp_enqueue_style( 'serve-first-layout-style' , get_template_directory_uri() . '/layouts/content-sidebar.css');
+        }
         
         wp_enqueue_style('serv-first-google-fonts', 'http://fonts.googleapis.com/css?family=Lato:100,400,700,900,400italic,900italic|PT+Serif:400,700,400italic,700italic');
         
