@@ -46,7 +46,23 @@
 		<nav id="site-navigation" class="main-navigation" role="navigation">
                     
 			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Menu', 'serve-first' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+			<?php 
+                        
+                        
+                            if (is_front_page()){
+                                /*custom menu*/
+                                    wp_nav_menu( array( 'menu' => 'Front Page Menu' ) );
+                            } else {
+                                /*default menu*/
+                                    wp_nav_menu( array( 'theme_location' => 'primary' ) );
+                            }
+
+                        
+                        
+                        //wp_nav_menu( array( 'theme_location' => 'primary' ) ); 
+                        
+                        
+                        ?>
                         <div class="search-toggle">
                             <i class="fa fa-search"></i>
                             <a href="#search-container" class="screen-reader-text"><?php _e( 'Search', 'serve-first' ); ?></a>

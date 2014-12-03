@@ -40,6 +40,8 @@ function serve_first_setup() {
 	add_theme_support( 'automatic-feed-links' );
         add_image_size('large-thumb', 1060, 650, true);
         add_image_size('index-thumb', 780, 250, true);
+        //front page testimonial pictures
+        add_image_size('testimonial-mug', 253, 253, true);
 
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
@@ -116,6 +118,7 @@ function serve_first_scripts() {
         
        if (is_front_page()){
            wp_enqueue_style('serve-first-front-page-style',  get_stylesheet_directory_uri() . '/layouts/front-page.css');
+           wp_enqueue_script('serve-first-front-page-script',get_stylesheet_directory_uri() . '/js/frontpagescript.js', array('jquery'), "20141202");
        }
         //this if block is for page templates style sheets 
        if (is_page_template('page-templates/page-nosidebar.php')) {
@@ -145,6 +148,14 @@ function serve_first_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'serve_first_scripts' );
+
+/*excluding testimonials from news page*/
+function exclude_testimonials( $query ) {
+    if ( !$query->is_category('testimonial') && $query->is_main_query() ) {
+        $query->set( 'cat', '-191' );
+    }
+}
+add_action( 'pre_get_posts', 'exclude_testimonials' );
 
 /**
  * Implement the Custom Header feature.
