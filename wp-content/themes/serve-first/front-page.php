@@ -16,11 +16,12 @@ global $more; //allows truncation of page content displayed on single page view
                     <section id="call-to-action">
                         <div class="indent clear">
                                         <?php 
-                                        $query = new WP_Query( 'pagename=book-an-appointment' );
+                                        $query = new WP_Query( 'pagename=about' );
                                         // The Loop
                                         if ( $query->have_posts() ) {
                                                 while ( $query->have_posts() ) {
                                                         $query->the_post();
+                                                        $more = 0; //sets more variable to false
                                                         echo '<div class="entry-content">';
                                                         the_content();
                                                         echo '</div>';
@@ -37,9 +38,10 @@ global $more; //allows truncation of page content displayed on single page view
                         <div class="indent clear">
                                 <?php 
                                 $args = array(
-                                        'posts_per_page' => 3,
-                                        'orderby' => 'rand',
-                                        'category_name' => 'testimonials'
+                                        'posts_per_page' => 4,
+                                        'orderby' => 'ID',
+                                        'order' =>'ASC',
+                                        'category_name' => 'get-involved'
                                 );
 
                                 $query = new WP_Query( $args );
