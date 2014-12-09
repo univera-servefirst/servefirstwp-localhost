@@ -434,6 +434,7 @@ a:active {
 /*--------------------------------------------------------------
 5.2 Menus
 --------------------------------------------------------------*/
+
 .main-navigation {
     position: relative;
     float: left;
@@ -444,17 +445,20 @@ a:active {
     text-transform: uppercase;
     background: #313131;
     background: hsl(0, 0%, 19%);
+
 }
 
 .main-navigation ul {
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
+     
 }
 
 .main-navigation li {
 	float: left;
 	position: relative;
+  
 }
 
 .main-navigation a {
@@ -466,6 +470,7 @@ a:active {
     line-height: 1.3em;
     color: white;
     color: hsl(0, 0%, 100%);
+   
 }
 
 
@@ -523,6 +528,7 @@ a:active {
     background: white;
     color: #313131;
     color: hsl(0, 0%, 19%);
+   
 }
 
 .main-navigation .current_page_ancestor {
@@ -898,6 +904,7 @@ X.X Header
     background: hsla(0, 0%, 0%, .7);
 }
 .site-branding {
+    height: 700px;
     padding: 6rem 0;
     text-align: center;
     background: #2c86ba;
@@ -914,13 +921,42 @@ X.X Header
     border: solid 1px hsla(0, 0%, 100%, .3);
 }
 
-.site-title {
+.sf-title {
+    background:#fff;
+    height: 147px;
+}
+.site-title{
     font-weight: 700;
     font-size: 40px;
-    font-size: 4.5rem;
+    font-size: 5.5rem;
     text-transform: uppercase;
     line-height: normal;
     padding-bottom: 1rem;
+    font-family:'Lato', sans-serif;
+    color:#00b300;
+    width:500px;
+    margin: auto;
+    text-align: center;
+}
+
+.sflogo {
+    margin-top:10px;
+    margin-left:10px;
+     float:left;
+        width: 147px;
+	height: 150px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background: url(http://localhost/servefirst-test/wp-content/uploads/2014/12/serve-first-logo.png) no-repeat; 
+}
+.sflogo a{
+    
+/*    padding:0;
+   
+     border:1px solid #fff;
+    border-radius:10px;*/
+    
 }
 
 .site-description {
@@ -960,6 +996,8 @@ X.X Header
     color: #fff;
     text-align: center;
     cursor: pointer;
+    background: #313131;
+    background: hsl(0, 0%, 19%);
 }
 
 .search-toggle:hover,

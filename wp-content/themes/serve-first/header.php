@@ -23,6 +23,17 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'serve-first' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
+           <!-- <div class="sf-title">
+                <div class="sflogo"><a href="http://localhost/servefirst-test/"><img src="http://localhost/servefirst-test/wp-content/uploads/2014/12/serve-first-logo.png"></a></div>
+                <div class="site-title">Serve First</div>
+            </div>-->
+             <!--<div class="title-box">
+                <h1 class="site-title"><a href="<?php// echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php// bloginfo( 'name' ); ?></a></h1>
+                <h2 class="site-description"><?php// bloginfo( 'description' ); ?></h2>
+            </div>-->
+             <div class="sflogo"><a href="http://localhost/servefirst-test/"></a></div>
+           
+            
             <?php if ( get_header_image() && ('blank' == get_header_textcolor()) ) { ?>
                 <figure class="header-image">
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
@@ -37,13 +48,9 @@
                     echo '<div class="site-branding">';
                 }
             ?>
-            <div class="title-box">
-                <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-                <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-            </div>
+           
             </div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation" role="navigation">
+ <nav id="site-navigation" class="main-navigation" role="navigation">
                     
 			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Menu', 'serve-first' ); ?></button>
 			<?php 
@@ -69,6 +76,7 @@
                         </div>
                         <?php serve_first_social_menu(); ?>
 		</nav><!-- #site-navigation -->
+		
                 <div id="search-container" class="search-box-wrapper clear">
                     <div class="search-box clear">
                         <?php get_search_form(); ?>
