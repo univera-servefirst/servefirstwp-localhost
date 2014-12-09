@@ -443,8 +443,8 @@ a:active {
     clear: both;
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
-    background:  #2AB22A;
-    background: hsl(120, 62%, 43%);
+    background: #313131;
+- background: hsl(0, 0%, 19%);
 
 }
 
@@ -495,15 +495,14 @@ a:active {
 }
 
 .main-navigation ul ul li {
-    background: #00DB00;
-    background: hsl(120, 100%, 43%);
+    
 }
 
 .main-navigation li:hover > a {
     color: #fff;
     color: hsl(0, 0%, 100%);
-    background: #00DB00;
-    background: hsl(120, 100%, 43%);
+    background: #4d4d4d;
+    background: hsl(0, 0%, 30%);
 }
 
 .main-navigation ul ul :hover > a {
@@ -511,8 +510,8 @@ a:active {
 }
 
 .main-navigation ul ul a:hover {
-    background:  #2AB22A;
-    background: hsl(120, 62%, 43%);
+    background: #313131;
+    background: hsl(0, 0%, 19%);
     
 }
 
@@ -1003,14 +1002,14 @@ X.X Header
     color: #fff;
     text-align: center;
     cursor: pointer;
-    background:  #2AB22A;
-    background: hsl(120, 62%, 43%);
+    background: #313131;
+    background: hsl(0, 0%, 19%);
 }
 
 .search-toggle:hover,
 .search-toggle.active {
-     background: #00DB00;
-    background: hsl(120, 100%, 43%);
+     background: #4d4d4d;
+     background: hsl(0, 0%, 30%);
 }
 
 @media screen and (max-width: 600px) {
