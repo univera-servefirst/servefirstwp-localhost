@@ -27,7 +27,7 @@ function serve_first_custom_header_setup() {
 		'default-image'          => '',
 		'default-text-color'     => 'ffffff',
 		'width'                  => 1280,
-		'height'                 => 800,
+		'height'                 => 700,
 		'flex-height'            => false, /*restrict image height*/
 		'wp-head-callback'       => 'serve_first_header_style',
 		'admin-head-callback'    => 'serve_first_admin_header_style',

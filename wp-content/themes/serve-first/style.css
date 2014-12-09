@@ -443,8 +443,8 @@ a:active {
     clear: both;
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
-    background: #313131;
-    background: hsl(0, 0%, 19%);
+    background:  #2AB22A;
+    background: hsl(120, 62%, 43%);
 
 }
 
@@ -495,22 +495,25 @@ a:active {
 }
 
 .main-navigation ul ul li {
-
+    background: #00DB00;
+    background: hsl(120, 100%, 43%);
 }
 
 .main-navigation li:hover > a {
     color: #fff;
     color: hsl(0, 0%, 100%);
-    background: #4d4d4d;
-    background: hsl(0, 0%, 30%);
+    background: #00DB00;
+    background: hsl(120, 100%, 43%);
 }
 
 .main-navigation ul ul :hover > a {
+   
 }
 
 .main-navigation ul ul a:hover {
-    background: #313131;
-    background: hsl(0, 0%, 19%);
+    background:  #2AB22A;
+    background: hsl(120, 62%, 43%);
+    
 }
 
 .main-navigation ul li:hover > ul {
@@ -529,11 +532,13 @@ a:active {
     color: #313131;
     color: hsl(0, 0%, 19%);
    
+   
 }
 
 .main-navigation .current_page_ancestor {
     background: #4d4d4d;
     background: hsl(0, 0%, 30%);
+    
 }
 
 .main-navigation ul ul .current_page_parent,
@@ -624,6 +629,7 @@ a:active {
 		background: #4d4d4d;
 		background: hsl(0, 0%, 30%);
                 
+                
 	}
 
 	.main-navigation .current_page_ancestor { background: inherit; }
@@ -641,7 +647,8 @@ a:active {
 		color: #fff;
 		color: hsl(0, 0%, 100%);
 		background: #4d4d4d;
-		background: hsl(0, 0%, 30%);    
+		background: hsl(0, 0%, 30%);  
+                
 	}
         
 } // End responsive menu
@@ -904,7 +911,7 @@ X.X Header
     background: hsla(0, 0%, 0%, .7);
 }
 .site-branding {
-    height: 700px;
+    height: 600px;
     padding: 6rem 0;
     text-align: center;
     background: #2c86ba;
@@ -943,12 +950,12 @@ X.X Header
     margin-top:10px;
     margin-left:10px;
      float:left;
-        width: 147px;
-	height: 150px;
+        width: 200px;
+	height: 205px;
 	border-radius: 150px;
 	-webkit-border-radius: 150px;
 	-moz-border-radius: 150px;
-	background: url(http://localhost/servefirst-test/wp-content/uploads/2014/12/serve-first-logo.png) no-repeat; 
+	background: url(http://localhost/servefirst-test/wp-content/uploads/2014/12/serve-first-logo.gif) no-repeat; 
 }
 .sflogo a{
     
@@ -996,14 +1003,14 @@ X.X Header
     color: #fff;
     text-align: center;
     cursor: pointer;
-    background: #313131;
-    background: hsl(0, 0%, 19%);
+    background:  #2AB22A;
+    background: hsl(120, 62%, 43%);
 }
 
 .search-toggle:hover,
 .search-toggle.active {
-    background: #4d4d4d;
-    background: hsl(0, 0%, 30%);
+     background: #00DB00;
+    background: hsl(120, 100%, 43%);
 }
 
 @media screen and (max-width: 600px) {
