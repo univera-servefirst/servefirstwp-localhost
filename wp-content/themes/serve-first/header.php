@@ -31,25 +31,27 @@
                 <h1 class="site-title"><a href="<?php// echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php// bloginfo( 'name' ); ?></a></h1>
                 <h2 class="site-description"><?php// bloginfo( 'description' ); ?></h2>
             </div>-->
-             <div class="sflogo"><a href="http://localhost/servefirst-test/"></a></div>
-           
             
-            <?php if ( get_header_image() && ('blank' == get_header_textcolor()) ) { ?>
-                <figure class="header-image">
-                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                            <img src="<?php header_image(); ?>" width="< ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
-                    </a>
-                </figure>
-            <?php } // End header image check. ?>
-            <?php 
-                if ( get_header_image() && !('blank' == get_header_textcolor()) ) { 
-                    echo '<div class="site-branding header-background-image" style="background-image: url(' . get_header_image() . ')">'; 
-                } else {
-                    echo '<div class="site-branding">';
-                }
-            ?>
            
+            <?php if(is_front_page() ) { ?>
+              <div class="sflogo"><a href="http://localhost/servefirst-test/"></a></div>
+                <?php if ( get_header_image() && ('blank' == get_header_textcolor()) ) { ?>
+                    <figure class="header-image">
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                                <img src="<?php header_image(); ?>" width="< ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
+                        </a>
+                    </figure>
+                <?php } // End header image check. ?>
+                <?php 
+                    if ( get_header_image() && !('blank' == get_header_textcolor()) ) { 
+                        echo '<div class="site-branding header-background-image" style="background-image: url(' . get_header_image() . ')">'; 
+                    } else {
+                        echo '<div class="site-branding">';
+                    }
+                ?>
+          
             </div><!-- .site-branding -->
+             <?php } //end if is front page?>
  <nav id="site-navigation" class="main-navigation" role="navigation">
                     
 			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Menu', 'serve-first' ); ?></button>
