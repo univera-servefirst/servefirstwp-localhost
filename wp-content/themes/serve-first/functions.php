@@ -159,13 +159,21 @@ function serve_first_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'serve_first_scripts' );
 
-/*excluding testimonials from news page*/
-function exclude_testimonials( $query ) {
-    if ( !$query->is_category('testimonial') && $query->is_main_query() ) {
-        $query->set( 'cat', '-191' );
-    }
+/*excluding certain categories from news page*/
+function exclude_categories( $query ) {
+ if ( $query->is_home() && $query->is_main_query() ) {
+ $query->set( 'cat', '-191, -29, -30, -198, -38, -199, -49, -50');
+ }
 }
-add_action( 'pre_get_posts', 'exclude_testimonials' );
+add_action( 'pre_get_posts', 'exclude_categories' );
+
+/*THIS CODE WILL REMOVE CATEGORIES FROM THE POSTS WYSIWYG*/
+//function exclude_testimonials( $query ) {
+//    if ( !$query->is_category('testimonial') && $query->is_main_query() ) {
+//        $query->set( 'cat', '-191' );
+//    }
+//}
+//add_action( 'pre_get_posts', 'exclude_testimonials' );
 
 /**
  * Implement the Custom Header feature.
