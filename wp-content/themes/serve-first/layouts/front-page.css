@@ -53,9 +53,7 @@
 #call-to-action {
     color: #fff;
     color: hsl(0, 0%, 100%);
-/*    background: #00497A;
-    background: hsl(204, 100%, 24%);*/
-    background: hsl(120, 62%, 43%);
+    background: #12AD2B;
     padding: 4rem 0;
 }
 
@@ -212,6 +210,8 @@
 .services-list .more-link {
     text-decoration: underline;
 }
+
+
 
 /* SERVICES RESPONSIVE */ 
 
