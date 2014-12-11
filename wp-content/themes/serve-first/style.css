@@ -946,15 +946,15 @@ X.X Header
 }
 
 .sflogo {
-    margin-top:10px;
-    margin-left:10px;
+    margin-top:20px;
+    margin-left:30px;
      float:left;
-        width: 200px;
-	height: 205px;
-	border-radius: 150px;
+        width: 214px;
+	height: 276px;
+/*	border-radius: 150px;
 	-webkit-border-radius: 150px;
-	-moz-border-radius: 150px;
-	background: url(http://localhost/servefirst-test/wp-content/uploads/2014/12/serve-first-logo.gif) no-repeat; 
+	-moz-border-radius: 150px;*/
+	/*background: url(http://localhost/servefirst-test/wp-content/uploads/2014/12/servefirst_whitecropped.png) no-repeat;*/ 
 }
 .sflogo a{
     
