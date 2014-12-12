@@ -7,7 +7,8 @@
  * @package serve-first
  */
 ?>
-
+<!---back to top link-->
+    <a href="#" class="back-to-top">Back to Top</a>
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">

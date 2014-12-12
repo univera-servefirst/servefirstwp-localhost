@@ -441,7 +441,6 @@ a:active {
 .logo-icon{
     float:left;
     padding: 0 5px;
-    content:url('http://localhost/servefirst-test/');
 }
 .main-navigation {
     position: relative;
@@ -1855,5 +1854,22 @@ object {
 
 .site-info { 
     text-align: center; 
+}
+
+/*style and jquery for back to top button found at http://www.developerdrive.com/2013/07/using-jquery-to-add-a-dynamic-back-to-top-floating-button-with-smooth-scroll/ */
+.back-to-top {
+    position: fixed;
+    bottom: 2em;
+    right: 0px;
+    text-decoration: none;
+    color: #000000;
+    background-color: rgba(18, 173, 43, 0.80);
+    font-size: 16px;
+    padding: 1em;
+    display: none;
+}
+
+.back-to-top:hover {    
+    background-color: rgba(135, 135, 135, 0.50);
 }
 
