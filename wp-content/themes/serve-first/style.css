@@ -1863,13 +1863,13 @@ object {
     right: 0px;
     text-decoration: none;
     color: #000000;
-    background-color: rgba(18, 173, 43, 0.80);
+    background-color: rgb(18, 173, 43);
     font-size: 16px;
     padding: 1em;
     display: none;
 }
 
 .back-to-top:hover {    
-    background-color: rgba(135, 135, 135, 0.50);
+    background-color: rgba(18, 173, 43, 0.50);
 }
 

@@ -14,7 +14,9 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
             <?php get_sidebar('footer'); ?>
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'serve-first' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'serve-first' ), 'WordPress' ); ?></a>
+			<a href="<?php echo esc_url( __( 'http://servefirst.org/', 'serve-first' ) ); ?>"><?php// printf( __( 'Proudly powered by %s', 'serve-first' ), 'WordPress' ); ?>
+                        &copy; 2014 <?php if (date('Y') !== "2014") {echo "- " . date('Y'); }?> Univera Serve First
+                        </a>
 			<span class="sep"> | </span>
 			<?php printf( __( 'Theme: %1$s by %2$s.', 'serve-first' ), 'Serve First', '<a href="http://amberalter.com" rel="designer">Amber</a>' ); ?>
 		</div><!-- .site-info -->
