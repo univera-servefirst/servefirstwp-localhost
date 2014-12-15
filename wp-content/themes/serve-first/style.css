@@ -678,9 +678,9 @@ a:active {
 
 .menu-social li a:before {
     display: inline-block;
-    padding: 0 5px;
+    padding: 0 5px; 
     vertical-align: top;
-    font-family: 'Fontawesome';
+    font-family: 'fontawesome';
     font-size: 20px;
     color: #fff;
     -webkit-font-smoothing: antialiased;
