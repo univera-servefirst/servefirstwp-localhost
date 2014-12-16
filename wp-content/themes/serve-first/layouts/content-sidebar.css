@@ -114,3 +114,50 @@ Layout: Content-Sidebar
     background: #fff;
 }           
   
+
+/*Styles for content-partnerships.php/category-partnerships.php*/
+.partnerships-content-area {
+        
+       overflow: auto;
+    }
+.partnerships-site-main{
+    overflow: auto;
+}
+
+@media screen and (min-width: 1540px) {
+    .partnerships-content-area {
+        width: 80%;
+        margin:auto;
+       
+    }
+}
+
+@media screen and (min-width: 1160px) and (max-width: 1539px){
+    .partnerships-content-area {
+        padding-left:3em;
+        width: 80%;
+        margin:auto;
+         
+    }
+}
+.partnerships-index-box {
+    width: 450px;
+    max-width: 40rem;
+    height: 200px;
+    padding: 1em 0 2em;
+    margin:1.5em;
+    background: #fff;
+    background: hsl(0, 0%, 100%);
+    float:left;
+}   
+
+.making-a-difference{
+    padding:2em;
+    background-color: #fff;
+}
+.partnership-box{
+    overflow:auto;
+    
+    padding-left:2em;
+}
+

@@ -138,6 +138,11 @@ function serve_first_scripts() {
             wp_enqueue_style( 'serve-first-layout-style' , get_template_directory_uri() . '/layouts/content-sidebar.css');
         }
         
+        //category page stylesheets
+        if(is_category('partnerships')){
+          wp_enqueue_style( 'serve-first-layout-style' , get_template_directory_uri() . '/layouts/content-partnerships.css');  
+        }
+        
         wp_enqueue_style('serve-first-google-fonts', 'http://fonts.googleapis.com/css?family=Lato:100,400,700,900,400italic,900italic|PT+Serif:400,700,400italic,700italic');
         
 //        wp_enqueue_style('serve-first-fontawesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
