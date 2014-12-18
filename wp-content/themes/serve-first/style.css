@@ -1383,6 +1383,9 @@ input[type="search"] {
 	margin: 1.5em 0 0;
 }
 
+
+
+
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
@@ -1829,11 +1832,22 @@ object {
     margin: 0 auto;
     border: none;
 }
-          
+       
+/*--------------------------------------------------------------
+ X.X Page Styles
+--------------------------------------------------------------*/
+/*styles for Search results page */
 
+.search-article{
+    background-color:#fff;
+}
+
+.search-article article{
+    margin-top: 2em;
+}
 
 /*--------------------------------------------------------------
- 13.0 Footer
+  X.X  Footer
 --------------------------------------------------------------*/
 
 .site-footer {
