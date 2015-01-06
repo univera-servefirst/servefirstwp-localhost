@@ -124,6 +124,10 @@ Layout: Content-Sidebar
     overflow: auto;
 }
 
+.category-partnerships .image-shifter{
+    background-color:#fff;
+}
+
 @media screen and (min-width: 1540px) {
     .partnerships-content-area {
         width: 80%;

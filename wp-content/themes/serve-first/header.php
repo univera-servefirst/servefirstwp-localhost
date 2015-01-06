@@ -27,7 +27,8 @@
             
            
             <?php if(is_front_page() ) { ?>
-             <div class="sflogo"><a href="http://localhost/servefirst-test/"><img src="http://localhost/servefirst-test/wp-content/uploads/2014/12/servefirst_whitecropped.png"></a></div>
+             <div class="sflogo"><a href="http://localhost/servefirst-test/"><img src="http://localhost/servefirst-test/wp-content/uploads/2015/01/servefirst_greencropped.png"></a></div>
+             <div class="tag-line-box"><div class="tag-line">Bringing the best of nature to the youngest of human kind.</div></div>
                 <?php if ( get_header_image() && ('blank' == get_header_textcolor()) ) { ?>
                     <figure class="header-image">
                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">

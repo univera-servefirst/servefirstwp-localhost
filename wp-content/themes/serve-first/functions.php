@@ -162,8 +162,12 @@ function serve_first_scripts() {
         wp_enqueue_script( 'serve-first-masonry', get_template_directory_uri() . '/js/masonry-settings.js', array('masonry'), '20140401', true );
         
         wp_enqueue_script('serve-first-back-to-top-script',get_stylesheet_directory_uri() . '/js/back-to-top-btn.js', array('jquery'), "20141211");
+        
         wp_enqueue_script('serve-first-category-sticky-icon-script',get_stylesheet_directory_uri() . '/js/category-sticky-icon.js', array('jquery'), "20141218");
 
+        if (!is_front_page()){
+           wp_enqueue_script('serve-first-image-caption-script',get_stylesheet_directory_uri() . '/js/image-caption.js', array('jquery'), "20150106"); 
+        }
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
