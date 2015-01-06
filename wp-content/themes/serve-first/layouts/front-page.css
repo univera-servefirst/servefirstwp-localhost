@@ -42,6 +42,8 @@
     font-size: 3rem;
     line-height: 1.2em;
 }
+
+
 /* CONTENT AREA */
 .content-area {
 	background: #fff;
@@ -155,7 +157,7 @@
     }
 }
 
-/* SERVICES */ 
+/* INTRO/ABOUT */ 
 
 #services {
     padding: 4rem 0;
@@ -213,7 +215,7 @@
 
 
 
-/* SERVICES RESPONSIVE */ 
+/* INFO-STATS*/ 
 
 @media screen and (min-width: 450px) {
     .services-title {
@@ -236,7 +238,7 @@
     }
 }
 
-/* MEET THE DOCTOR */ 
+/* MAP */ 
 
 #meet {
     padding-top: 4rem;
@@ -276,6 +278,14 @@
     #contact .front-right {
         text-align: right;
     }
+}
+
+/*PHOTO CREDIT*/
+.photo-credit{
+    margin-bottom: -4em;
+    width: 100%;
+    font-size: .9em;
+    font-style: italic;
 }
    
 /* targets front-page*/

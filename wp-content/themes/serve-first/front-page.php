@@ -119,11 +119,14 @@ global $more; //allows truncation of page content displayed on single page view
                                 ?>
                         </div><!-- .indent -->
                 </section><!-- #contact -->
+                <section class="photo-credit">
+                    <div class="indent clear">
+                        <div >All photography on this page © Matt Dayka/Vitamin Angels</div>
+                    </div>
+                </section>
                 
-
-			
-
 		</main><!-- #main -->
+                
 	</div><!-- #primary -->
 
 
