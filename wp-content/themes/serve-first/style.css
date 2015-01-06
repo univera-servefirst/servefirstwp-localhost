@@ -1255,6 +1255,8 @@ input[type="search"] {
     line-height: 1.5em;
 }
 
+
+
 /* Smaller fonts for smaller screens */
 @media screen and (max-width: 680px) {
     .entry-title {
@@ -1674,16 +1676,19 @@ object {
     margin: 0 auto;
 }
 
+
 @media screen and (min-width: 1820px) {
     .image-shifter {
         width: 1060px;
         float: none;
         margin: 0 auto;
     }
+   
 }
 
 @media screen and (min-width: 1540px) and (max-width: 1820px) {
     .image-shifter { margin-right: 380px;}
+     
 }
 
 @media screen and (min-width: 1440px) and (max-width: 1819px) {
@@ -1691,6 +1696,7 @@ object {
         width: 1060px; 
         float: right;
     }
+   
 }
 
 .front-index-thumbnail {
@@ -1740,7 +1746,19 @@ object {
     background: #e5e5e5;
     background: hsl(0, 0%, 90%);
 }
-
+/*featured image caption*/
+ .image-caption{
+     width:1060px;
+     max-width: 100%;
+     margin: auto;
+     text-align: right;
+     font-size: .8em;
+    }
+ @media screen and (max-width: 1061px){
+   .image-caption{
+     padding-right: 5px;
+    }
+}
 
 /*--------------------------------------------------------------
 12.2 Galleries

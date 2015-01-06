@@ -13,7 +13,8 @@
             echo '<div class="single-post-thumbnail clear">';
             echo '<div class="image-shifter">';
             echo the_post_thumbnail('large-thumb');
-            echo '</div>';
+            echo '<div class="image-caption">' . get_post(get_post_thumbnail_id())->post_excerpt . '</div>';
+            echo '</div>';  
             echo '</div>';
         }
     ?>
