@@ -32,8 +32,9 @@ get_header(); ?>
 				?>
 
 			<?php endwhile; ?>
-
+			<div class="partnerships-paging-nav">
 			<?php serve_first_paging_nav(); ?>
+			</div>
 
 		<?php else : ?>
 
