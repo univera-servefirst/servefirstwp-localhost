@@ -1772,6 +1772,13 @@ object {
     margin-top: -1em;
     margin-bottom: 1em;
 }
+
+/*styles for partnerships category page*/
+.partnership-box .small-index-thumbnail{
+	width: 400px;
+	height: 200px;
+	overflow: hidden;
+}
    
 /*--------------------------------------------------------------
 12.1 Captions
