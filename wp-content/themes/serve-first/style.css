@@ -912,12 +912,21 @@ X.X Header
     display: block;
     margin: 0 auto;
 }
+
+
+
 .header-background-image {
-    background: no-repeat center;
+    background-repeat: no-repeat!important;
     background-size: cover!important;
     -moz-background-size: cover!important;
     -webkit-background-size: cover!important;
+/*background-size: 100%!important;
+    -moz-background-size: 100%!important;
+    -webkit-background-size: 100%!important;*/
+
 }
+
+
 
 
 .header-background-image .title-box {
@@ -962,7 +971,7 @@ X.X Header
 
 .sflogo {
     margin-top:20px;
-    margin-left:23px;
+    margin-left:21px;
      float:left;
         width: 214px;
 	height: 276px;
@@ -987,12 +996,13 @@ X.X Header
     
 }
 .tag-line{
-    width:250px;
+    width:20%;
+    max-width:245px;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-style: italic;
     font-size: 21px;
-    padding-left: 25px;
+    padding-left: 21px;
 }
 
 .site-description {
@@ -1023,28 +1033,36 @@ X.X Header
         display:none;
     } 
     .sflogo {
-        float:none;
+/*        float:none;
         width: 214px;
-        margin: 50px auto;
+        margin: 50px auto;*/
+        display:none;
+        margin: 0;
  
     }
 
     .tag-line-box{
-        display:block;
+/*        display:block;
         float:none;
         width:100%;
-        margin-top:50px;
+        margin-top:50px;*/
+        display:none;
+        margin-top:0;
 
     }
     .tag-line{
-        text-align: center;
+/*        text-align: center;
         width:300px;
-        margin:50px auto;
+        margin:50px auto;*/
     }
-
+/*.tag-line-box{
+ display:none;
+    
+}*/
     
     
 }
+
 
 
 /* Header search */

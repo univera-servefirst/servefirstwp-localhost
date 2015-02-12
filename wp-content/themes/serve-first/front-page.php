@@ -34,6 +34,13 @@ global $more; //allows truncation of page content displayed on single page view
                         </div><!-- .indent -->
                 </section><!-- #call-to-action -->
                 
+                
+                
+                
+                
+                
+                
+                
                  <section id="testimonials">
                         <div class="indent clear">
                                 <?php 

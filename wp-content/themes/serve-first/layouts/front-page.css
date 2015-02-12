@@ -50,7 +50,7 @@
 	background: hsl(0, 0%, 100%);
 }
 				
-/*CALL TO ACTION*/ 
+/*CALL TO ACTION & About Front*/ 
 
 #call-to-action {
     color: #fff;
@@ -59,12 +59,14 @@
     padding: 4rem 0;
 }
 
-#call-to-action .section-title {
+
+
+#call-to-action .section-title{
     color: #fff;
     font-size: 44px;
 }
 
-#call-to-action .entry-content {
+#call-to-action .entry-content{
     font-size: 130%;
 }
 

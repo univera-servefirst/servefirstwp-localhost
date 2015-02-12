@@ -11,7 +11,7 @@ if (!class_exists("nxs_class_SNAP_TW")) { class nxs_class_SNAP_TW {
       foreach ($options as $ii=>$ntOpts) $out[$ii] = $this->doPostToNT($ntOpts, $message);
       return $out;
     }
-    function doPostToNT($options, $message){ global $nxs_urlLen; $badOut = array('pgID'=>'', 'isPosted'=>0, 'pDate'=>date('Y-m-d H:i:s'), 'Error'=>''); 
+    function doPostToNT($options, $message){ global $nxs_urlLen; $badOut = array('pgID'=>'', 'isPosted'=>0, 'pDate'=>date('Y-m-d H:i:s'), 'Error'=>'');  
       if (!function_exists('nxs_remote_get') && function_exists('wp_remote_get')) { function nxs_remote_get($url){return wp_remote_get($url);} }
       if (!function_exists('is_nxs_error') && function_exists('is_wp_error')) { function is_nxs_error($a){return is_wp_error($a);} }
       //## Check settings
@@ -38,8 +38,13 @@ if (!class_exists("nxs_class_SNAP_TW")) { class nxs_class_SNAP_TW {
       require_once ('apis/tmhOAuth.php'); if ($nxs_urlLen>0) { $msg = nsTrnc($msg, $twLim-22+$nxs_urlLen); } else $msg = nsTrnc($msg, $twLim); 
       if (substr($msg, 0, 1)=='@') $msg = ' '.$msg; //prr(urlencode($msg));  $msg = html_entity_decode($msg);  prr(urlencode($msg));   die();  
       $tmhOAuth = new NXS_tmhOAuth(array( 'consumer_key' => $options['twConsKey'], 'consumer_secret' => $options['twConsSec'], 'user_token' => $options['twAccToken'], 'user_secret' => $options['twAccTokenSec']));      
-      if ($options['attchImg']!=false && $img!='') $code = $tmhOAuth -> request('POST', 'https://api.twitter.com/1.1/statuses/update_with_media.json', array( 'media[]' => $img, 'status' => $msg), true, true);    
-        else $code = $tmhOAuth->request('POST', $tmhOAuth->url('1.1/statuses/update'), array('status' =>$msg)); 
+      if ($options['attchImg']!=false && $img!='') $params_array =array( 'media[]' => $img, 'status' => $msg); else $params_array = array('status' =>$msg);
+      if (!empty($options['in_reply_to_id'])) $params_array['in_reply_to_status_id'] = $options['in_reply_to_id'];      
+      if ($options['attchImg']!=false && $img!='') $code = $tmhOAuth -> request('POST', 'https://api.twitter.com/1.1/statuses/update_with_media.json', $params_array, true, true);    
+        else $code = $tmhOAuth->request('POST', $tmhOAuth->url('1.1/statuses/update'), $params_array); //prr($msg);
+      
+      
+        
       if ( $code=='403' && stripos($tmhOAuth->response['response'], 'User is over daily photo limit')!==false && $options['attchImg']!=false && $img!='') { 
          $badOut['Error'] .= "User is over daily photo limit. Will post without image\r\n"; $code = $tmhOAuth->request('POST', $tmhOAuth->url('1.1/statuses/update'), array('status' =>$msg));
       }        
